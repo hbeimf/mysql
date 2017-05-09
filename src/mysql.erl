@@ -73,7 +73,7 @@ query_sql(Pool, Sql) ->
     end.
 
 init_emysql() ->
-    lager:info("connect mysql !!"),
+    % lager:info("connect mysql !!"),
     {ok, Pools} = application:get_env(mysql, pools),
     lists:foreach(fun({Pool, ConfigList}) ->
         {host, Host} = lists:keyfind(host, 1, ConfigList),
